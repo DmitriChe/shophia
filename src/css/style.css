@@ -9,6 +9,7 @@ figure {
 
 section {
     max-width: 1290px;
+    margin: 0 auto;
 }
 
 .section-headline {
@@ -88,9 +89,22 @@ section {
         .summer-images__item {
             margin: 0;
             width: 23%;
+            position: relative;
 
-            img {
-                width: 100%;
+            .summer-images__label {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background-color: var(--color-accent);
+                border-radius: 50%;
+                top: 18px;
+                left: 18px;
+                font-family: Lato, sans-serif;
+                font-size: 22px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                line-height: 60px;
             }
         }
     }
