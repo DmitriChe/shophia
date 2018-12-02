@@ -1,0 +1,111 @@
+@charset "UTF-8";
+@import "modules/vars.css";
+@import "modules/fonts.css";
+@import "modules/base.css";
+
+figure {
+    margin: 0;
+}
+
+section {
+    max-width: 1290px;
+}
+
+.section-headline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 65px 0;
+
+
+    .section-headline__line {
+        height: 1px;
+        background-color: var(--color-secondary);
+        min-width: 30%;
+    }
+
+    .section-headline__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+
+        .section-headline__rhomb {
+            width: 14px;
+            height: 14px;
+            background-color: var(--color-primary);
+            transform: rotate(-45deg);
+        }
+
+        .section-headline__text {
+            font-family: PlayfairDisplay, serif;
+            font-size: 30px;
+            font-weight: bold;
+            font-style: italic;
+            margin: 0 auto;
+        }
+    }
+}
+
+.handpicked {
+    display: flex;
+    flex-direction: column;
+
+    .handpicked-images {
+        display: flex;
+        justify-content: space-between;
+
+        .handpicked-images__side {
+            width: 31%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .handpicked-images__middle {
+            width: 36%;
+        }
+
+        .handpicked-images__item {
+            outline: 3px solid white;
+            outline-offset: -24px;
+        }
+    }
+}
+
+.summer {
+    display: flex;
+    flex-direction: column;
+
+
+    .summer-images {
+        padding: 2% 2% 0;
+        display: flex;
+        justify-content: space-between;
+        align-content: space-between;
+        flex-wrap: wrap;
+        border: 1px solid var(--color-secondary);
+
+        .summer-images__item {
+            margin: 0;
+            width: 23%;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.brands {
+    display: flex;
+    flex-direction: column;
+
+    .brands-images {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
