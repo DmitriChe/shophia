@@ -68,26 +68,102 @@ section {
         .handpicked-images__item {
             outline: 3px solid white;
             outline-offset: -24px;
+            position: relative;
+
+            .handpicked-hover {
+                visibility: hidden;
+            }
+            .handpicked-hover__darker {
+                visibility: hidden;
+                position: absolute;
+                top: 5%;
+                left: 5%;
+                width: 90%;
+                height: 90%;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .handpicked-hover__vertical-cross {
+                visibility: hidden;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                width: 3px;
+                height: 20%;
+                background-color: var(--color-primary);
+            }
+            .handpicked-hover__horizontal-cross {
+                visibility: hidden;
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                width: 20%;
+                height: 3px;
+                background-color: var(--color-primary);
+            }
+            .handpicked-hover__button {
+                visibility: hidden;
+                position: absolute;
+                border: none;
+                background-color: var(--color-button);
+                color: white;
+                width: 109px;
+                height: 42px;
+                font-family: Lato, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                left: calc((100% - 109px)/2);
+                bottom: 12%;
+            }
+
+            &:hover {
+                outline: none;
+            }
+            &:hover .handpicked-hover__darker {
+                visibility: visible;
+            }
+            &:hover .handpicked-hover__vertical-cross {
+                visibility: visible;
+            }
+            &:hover .handpicked-hover__horizontal-cross {
+                visibility: visible;
+            }
+            &:hover .handpicked-hover__button{
+                visibility: visible;
+            }
         }
     }
 }
+
+
+
 
 .summer {
     display: flex;
     flex-direction: column;
 
     .summer-images {
-        /*padding: 2% 2% 0;*/
+        padding: 20px 20px 0;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-content: space-evenly;
         flex-wrap: wrap;
         border: 1px solid var(--color-secondary);
-        height: 745px;
 
         .summer-images__item {
             width: 23%;
             position: relative;
+            margin-bottom: 20px;
+
+            @media (max-width: 1350px) {
+                width: 30%;
+            }
+            @media (max-width: 1100px) {
+                width: 48%;
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+            }
+
 
             .summer-images__label {
                 position: absolute;
@@ -102,7 +178,11 @@ section {
                 font-weight: bold;
                 color: white;
                 text-align: center;
-                line-height: 60px;
+                line-height: 50px;
+
+                & sup {
+                    font-size: 11px;
+                }
             }
             .product-checkout__button {
                 width: 72%;
@@ -113,8 +193,8 @@ section {
                 border-right: 45px solid transparent;
                 background-color: transparent;
                 position: absolute;
-                bottom: 0;
-                left: 14%;
+                bottom: 5px;
+                left: calc((100% - 72%)/2);
                 font-family: Lato, sans-serif;
                 font-size: 14px;
                 font-weight: bold;
@@ -123,7 +203,10 @@ section {
                 line-height: 45px;
             }
             .product-checkout__button:hover {
-                border-bottom: 45px solid #f0975c;
+                border-bottom: 45px solid var(--color-button);
+            }
+            &:hover .summer-images__image {
+                filter: brightness(50%);
             }
         }
     }
@@ -137,6 +220,12 @@ section {
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        .brands-images__item {
+            @media (max-width: 990) {
+                width: 30%;
+            }
+        }
     }
 }
 
