@@ -41,3 +41,12 @@
     font-style: italic;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'KrinkesDecorPERSONALUSE';
+    src: url('../fonts/KrinkesDecorPERSONALUSE.woff2') format('woff2'),
+    url('../fonts/KrinkesDecorPERSONALUSE.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
