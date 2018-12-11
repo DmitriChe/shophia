@@ -726,8 +726,17 @@ figure {
     background-color: var(--color-footer-bg);
     min-height: 206px;
 
+    .footer-bottom__triangle {
+        position: absolute;
+        color: var(--color-footer-darkgrey);
+        font-size: 11px;
+        left: calc(50% - 10px);
+        top: -12px;
+    }
+
     .footer-copyright {
         border-top: 1px solid var(--color-footer-darkgrey);
+        padding: 27px 0;
         font-family: Lato,sans-serif;
         font-size: 11px;
         line-height: 1.64;
@@ -737,7 +746,22 @@ figure {
         display: flex;
         justify-content: space-between;
         width: 170px;
-        color: #bbbbbb;
+        font-size: 20px;
+        color: var(--color-footer-darkgrey);
+
+        .footer-cards__item {
+            position: relative;
+            width: 22px;
+            height: 16px;
+            border-width: 0;
+            border-radius: 3px;
+            background-color: #bbbbbb;
+
+            &>svg {
+                position: absolute;
+                top: -2px;
+            }
+        }
     }
 }
 
