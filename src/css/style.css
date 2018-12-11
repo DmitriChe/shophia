@@ -197,6 +197,8 @@ figure {
 .advantages {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
 
     .advantages-item {
         margin-top: 66px;
@@ -251,7 +253,7 @@ figure {
             .advantages-item__title {
                 font-size: 30px;
                 font-weight: bold;
-                line-height: 0.6;
+                line-height: 0.8;
             }
             .advantages-item__subtitle {
                 font-size: 14px;
@@ -265,7 +267,6 @@ figure {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 65px 0;
 
     .section-headline__line {
         height: 1px;
@@ -330,11 +331,13 @@ figure {
 .handpicked {
     display: flex;
     flex-direction: column;
+    margin-bottom: 87px;
 
     .handpicked-images {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+        margin-top: 63px;
 
         @media (max-width: 700px) {
             flex-direction: column;
@@ -443,6 +446,7 @@ figure {
 .summer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 103px;
 
     .summer-images {
         padding: 20px 20px 0;
@@ -451,6 +455,7 @@ figure {
         align-content: space-evenly;
         flex-wrap: wrap;
         border: 1px solid var(--color-secondary);
+        margin-top: 55px;
 
         .summer-images__item {
             width: 23%;
@@ -520,12 +525,14 @@ figure {
 .brands {
     display: flex;
     flex-direction: column;
+    margin-bottom: 130px;
 
     .brands-images {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        margin-top: 110px;
 
         @media (max-width: 490px) {
             flex-direction: column;
@@ -565,18 +572,18 @@ figure {
         justify-content: space-between;
         flex-wrap: wrap;
         background-color: var(--color-primary);
+        margin-top: 60px;
+        min-height: 400px;
 
         .customer {
             display: flex;
             justify-content: space-between;
             width: 530px;
-            height: 400px;
+            min-height: 390px;
 
             .customer__photo {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                max-width: 254px;
             }
 
             .customer-text {
