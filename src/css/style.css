@@ -165,75 +165,135 @@ figure {
 
 .sale {
     position: relative;
-    height: 692px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #7e7974 url("../img/bg_image.jpg") no-repeat;
-    background-size: 100%;
-    margin-bottom: 66px;
+    background-color: #7e7974;
+
+    .sale__image {
+
+    }
 
     .sale-text {
+        width: 22%;
+        height: 55%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        width: 273px;
-        height: 273px;
-        border: 2px solid white;
-        border-radius: 3px;
+        position: absolute;
+        top: 21.5%;
+        left: calc(50% - 21% / 2);
 
-        .sale-text__outline {
-            width: 96%;
-            height: 96%;
+        .sale-text__border {
             display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
-            border: 1px solid white;
-            border-radius: 2px;
-            font-family: Lato, sans-serif;
-            color: white;
+            width: 100%;
+            height: 70%;
+            border: 2px solid white;
+            border-radius: 3px;
 
-            .sale-text__name {
-                font-size: 20px;
-                font-weight: bold;
-            }
-            .sale-text__main {
-                font-size: 59px;
-                font-weight: bold;
-                color: black;
-            }
-            .sale-text__upto {
-                font-size: 20px;
-                font-weight: bold;
+            .sale-text__outline {
+                width: 96%;
+                height: 96%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border: 1px solid white;
+                border-radius: 2px;
+                font-family: Lato, sans-serif;
+                color: white;
 
-                &::before {
-                    content: url(../img/svg/upto-left.svg);
-                    margin-right: 12px;
+                .sale-text__name {
+                    /*font-size: 20px;*/
+                    font-size: 1.2vw;
+                    font-weight: bold;
                 }
-                &::after {
-                    content: url(../img/svg/upto-right.svg);
-                    margin-left: 12px;
+                .sale-text__main {
+                    /*font-size: 59px;*/
+                    font-size: 3.6vw;
+                    font-weight: bold;
+                    color: black;
                 }
-            }
-            .sale-text__percentage {
-                font-size: 32px;
-                font-weight: bold;
-                color: black;
+                .sale-text__upto {
+                    /*font-size: 20px;*/
+                    font-size: 1.2vw;
+                    font-weight: bold;
+
+                    &::before {
+                        content: url(../img/svg/upto-left.svg);
+                        margin-right: 12px;
+                    }
+                    &::after {
+                        content: url(../img/svg/upto-right.svg);
+                        margin-left: 12px;
+                    }
+                }
+                .sale-text__percentage {
+                    /*font-size: 32px;*/
+                    font-size: 2vw;
+                    font-weight: bold;
+                    color: black;
+                }
             }
         }
+        .sale-checkout__button {
+            /*margin-top: 57px;*/
+            border: none;
+            background-color: var(--color-button);
+            color: white;
+            width: 13vw;
+            height: 4vw;
+            font-family: Lato, sans-serif;
+            /*font-size: 24px;*/
+            font-size: 1.5vw;
+            font-weight: bold;
+        }
     }
-    .sale-checkout__button {
-        margin-top: 57px;
-        border: none;
-        background-color: var(--color-button);
-        color: white;
-        width: 189px;
-        height: 53px;
-        font-family: Lato, sans-serif;
-        font-size: 24px;
-        font-weight: bold;
+}
+
+@media (max-width: 900px) {
+
+    .sale {
+
+        .sale-text {
+            width: 22%;
+            height: 55%;
+            top: 21.5%;
+            left: calc(50% - 21% / 2);
+
+            .sale-text__border {
+                width: 100%;
+                height: 70%;
+
+                .sale-text__outline {
+
+                    .sale-text__name {
+                        font-size: 2vw;
+                    }
+                    .sale-text__main {
+                        font-size: 6vw;
+                    }
+                    .sale-text__upto {
+                        font-size: 2vw;
+
+                        &::before {
+                            display: none;
+                        }
+                        &::after {
+                             display: none;
+                        }
+                    }
+                    .sale-text__percentage {
+                        font-size: 3vw;
+                    }
+                }
+            }
+            .sale-checkout__button {
+                width: 21vw;
+                height: 6vw;
+                font-size: 3vw;
+            }
+        }
     }
 }
 
@@ -242,9 +302,9 @@ figure {
     justify-content: space-between;
     margin-bottom: 100px;
     flex-wrap: wrap;
+    margin-top: 66px;
 
     .advantages-item {
-        margin-top: 66px;
         font-size: 43px;
         color: white;
         position: relative;
@@ -1014,17 +1074,6 @@ figure {
                     border: thin solid #484848;
                     text-align: center;
                     padding: 0;
-                }
-                .footer-subscribe__button {
-                    width: 101px;
-                    height: 33px;
-                    border: none;
-                    background-color: #323030;
-                    margin: 3px;
-                    font-family: Lato, sans-serif;
-                    font-size: 12px;
-                    text-align: center;
-                    color: white;
                 }
             }
         }
