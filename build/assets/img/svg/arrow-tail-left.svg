@@ -1,1 +1,7 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/arrow-tail-left.svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="45"
+     height="100"
+     viewBox="0 0 45 100">
+
+  <path id="arrow-tail-left" d="M496,910h39v100H490s43.5-51.852,43.5-52C533.5,956.184,496,910,496,910Z" transform="translate(-490 -910)"/>
+</svg>

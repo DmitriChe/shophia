@@ -1,1 +1,6 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/triangle.svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     id="triangle"
+     fill="#fff"
+     width="370" height="30" viewBox="0 0 370 30">
+  <path d="M1929,4602l-185,30-185-30h370Z" transform="translate(-1559 -4602)"/>
+</svg>

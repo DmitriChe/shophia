@@ -1,1 +1,6 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/24hour.svg
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="48px" height="49px">
+<text font-family="FontAwesome" fill="rgb(255, 255, 255)" transform="matrix( 1.00082418134732, 0, 0, 1,12.1527437533011, 41.0999999999999)" font-size="48px">&#61901;</text>
+</svg>

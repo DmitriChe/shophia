@@ -1,1 +1,8 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/arrow-left.svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="44"
+     height="100"
+     fill="#d9bf8f"
+     viewBox="0 0 44 100">
+
+  <path id="arrow-left" d="M980,898V998s-44-48.478-44-50.192C936,943.556,980,898,980,898Z" transform="translate(-936 -898)"/>
+</svg>

@@ -1,1 +1,7 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/upto-left.svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="60"
+     height="9.406"
+     fill="#fff"
+     viewBox="0 0 60 9.406">
+   <path id="upto-left" d="M627.008,489H687v1H627.008v-1Zm26.929-8.407h32.677v0.653H653.937V480.6Z" transform="translate(-627 -480.594)"/>
+</svg>
