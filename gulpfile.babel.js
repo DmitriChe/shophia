@@ -101,6 +101,12 @@ task('css', (cb) => {
     .pipe(gulpIf(isDevelopment, sourcemaps.write()))
     .pipe(dest(cms.modx.css))
     .pipe(browserSync.stream())
+  src('src/css/modules/slick/slick.css')
+      .pipe(dest(cms.modx.css))
+      .pipe(browserSync.stream())
+  src('src/css/modules/slick/slick-theme.css')
+      .pipe(dest(cms.modx.css))
+      .pipe(browserSync.stream())
   cb()
 })
 /****************************************************************************************************/

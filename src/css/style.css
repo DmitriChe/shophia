@@ -195,6 +195,10 @@ figure {
     }
 }
 
+.carousel {
+    background-color: #7e7974;
+}
+
 .sale {
     position: relative;
     background-color: #7e7974;
@@ -349,6 +353,7 @@ figure {
     margin-top: 66px;
 
     .advantages-item {
+        border: none;
         font-size: 43px;
         color: white;
         position: relative;
@@ -369,7 +374,7 @@ figure {
             &::before {
                 position: absolute;
                 content: url(../img/svg/arrow-tail-left.svg);
-                left: -45px;
+                left: -44px;
             }
             &::after {
                 position: absolute;
@@ -1214,6 +1219,7 @@ figure {
     height: 44px;
 }
 
+.carousel::after,
 .sale::after,
 .header-top::after,
 .sale::after,

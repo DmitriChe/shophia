@@ -13,9 +13,10 @@
     ]
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "jquery": "latest",
+    "normalize.css": "^8.0.1",
     "photoswipe": "^4.1.2",
+    "slick-carousel": "^1.8.1",
     "validate": "https://github.com/cferdinandi/validate.git"
   },
   "overrides": {

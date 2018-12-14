@@ -1,7 +1,13 @@
-import { sum } from './modules/module1'
-console.log(sum(1, 5))
-let a = 12
-const b = 'Test'
-document.body.addEventListener('click', ({target}) => {
-  console.log(target)
-})
+console.log('main.js успешно подключен!');
+
+$(".carousel").slick({
+    // сокрытие стрелок карусели!
+    arrows: false,
+
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: 'ease',
+    dots: true,
+    pauseOnDotsHover: true,
+    infinite: true,
+});
