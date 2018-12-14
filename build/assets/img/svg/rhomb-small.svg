@@ -1,1 +1,11 @@
-C:/OSPanel/domains/shophia.loc/src/img/svg/rhomb-small.svg
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ id="rhomb-small"
+ width="19px"
+ height="19px"
+ fill="#fff">
+
+
+<path
+ d="M9.419,0.009 L18.518,9.499 L9.419,18.990 L0.319,9.499 L9.419,0.009 Z"/>
+</svg>
