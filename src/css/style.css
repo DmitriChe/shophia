@@ -33,7 +33,7 @@ figure {
             margin-right: 19px;
         }
         &:hover {
-            text-shadow: 1px 1px 1px black;
+            font-weight: bold;
         }
     }
 
@@ -134,7 +134,7 @@ figure {
 
                 &:hover {
                     cursor: pointer;
-                    box-shadow:  0 0 10px lawngreen;
+                    box-shadow:  0 0 10px #55ACEE;
                 }
                 &:active {
                      box-shadow:  0 0 10px deeppink;
@@ -156,7 +156,7 @@ figure {
 
             &:hover {
                 cursor: pointer;
-                color: lawngreen;
+                color: #55ACEE;
             }
 
             .header-dropdown__item {
