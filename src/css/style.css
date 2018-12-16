@@ -4,6 +4,28 @@
 @import "modules/base.css";
 
 
+.scroll-up-button {
+    position: fixed;
+    bottom: 7vh;
+    right: 2vw;
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    border-radius: 10%;
+    cursor: pointer;
+    color: #fff;
+    vertical-align: center;
+    font-size: 34px;
+    text-align: center;
+    display: none;
+    z-index: 10;
+
+    &:hover {
+         opacity: 0.9;
+     }
+}
+
 .wrapper {
     max-width: 1290px;
     margin: 0 auto;
@@ -1099,10 +1121,82 @@ figure {
 
 @media (max-width: 550px) {
     .footer-top {
+        height: auto;
+
+        .footer-menu {
+            position: relative;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-content: center;
+            width: 100%;
+            margin: 10px auto;
+            padding: 0 10px;
+            background: var(--color-footer-bg);
+            color: #eee;
+            box-shadow:0 -1px rgba(0,0,0,.5) inset;
+
+            .footer-menu__item {
+                width: 100%;
+                text-aligh: center;
+
+                .footer-menu__title {
+                    display:block;
+                    padding: 0 18px 0 12px;
+                    transition: background 0.3s;
+                    cursor: pointer;
+                    margin: 10px auto;
+                }
+
+                .footer-menu__title:hover {
+                    color: #55ACEE;
+                }
+            }
+        }
+
+        .footer-connections {
+            .footer-connections__title {
+                text-align: center;
+            }
+            .footer-socials {
+                justify-content: center;
+                width: 100%;
+                padding: 0 10px;
+                font-size: 12px;
+
+                .footer-socials__item {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 5px
+                }
+            }
+            .footer-subscribe {
+                height: 80px;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: none;
+
+                .footer-subscribe__input {
+                    display: block;
+                    width: 100%;
+                    margin: 0 10px;
+                    border: thin solid #484848;
+                    text-align: center;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+/*
+@media (max-width: 550px) {
+    .footer-top {
 
         height: 500px;
 
-        /*Style for the first level menu bar*/
+        // Style for the first level menu bar
         .footer-menu {
             position: relative;
             display: flex;
@@ -1123,7 +1217,7 @@ figure {
 
                 .footer-menu__title {
                     position: relative;
-                    /*display:block;*/
+                    // display:block;
                     padding: 0 18px 0 12px;
                     transition: background 0.3s;
                     cursor: pointer;
@@ -1155,13 +1249,13 @@ figure {
                     transition: border-top .1s, border-bottom .1s .1s;
                 }
 
-                /*show the second level menu of the selected voice*/
+                // show the second level menu of the selected voice
                 .footer-menu__input:checked ~ .footer-menu__list {
                     max-height: 300px;
                     transition: max-height 0.5s ease-in;
                 }
 
-                /*style for the second level menu*/
+                // style for the second level menu
                 .footer-menu__list {
                     text-aligh: center;
                     width: 100%;
@@ -1229,7 +1323,7 @@ figure {
         }
     }
 }
-
+*/
 .footer-bottom {
     position: relative;
     background-color: var(--color-footer-bg);
@@ -1318,95 +1412,3 @@ figure {
     left: -50vw;
     right: -50vw;
 }
-
-
-/*!*Style for the first level menu bar*!
-.footer-menu {
-    position:relative;
-
-    width:100%;
-    height:3em;
-    margin:0;
-    padding:0 10px;
-    background:#333;
-    color:#eee;
-
-    .footer-menu__item {
-        position:relative;
-
-        .footer-menu__title {
-            position:relative;
-            display:block;
-            padding:0 18px 0 12px;
-            line-height:3em;
-            transition:background 0.3s;
-            cursor:pointer;
-        }
-
-        .footer-menu__title::after{
-            content:"";
-            position:absolute;
-            display:block;
-            top:50%;
-            right:5px;
-            width:0;
-            height:0;
-            border-top:4px solid rgba(255,255,255,.5);
-            border-bottom:0 solid rgba(255,255,255,.5);
-            border-left:4px solid transparent;
-            border-right:4px solid transparent;
-            transition:border-bottom .1s, border-top .1s .1s;
-        }
-
-        .footer-menu__title:hover,
-        .footer-menu__input:checked ~ .footer-menu__title{background:rgba(0,0,0,.3);}
-
-        .footer-menu__input:checked ~ .footer-menu__title::after{
-            border-top:0 solid rgba(255,255,255,.5);
-            border-bottom:4px solid rgba(255,255,255,.5);
-            transition:border-top .1s, border-bottom .1s .1s;
-        }
-
-        !*hide the inputs*!
-        .footer-menu__input{display:none}
-
-        !*show the second levele menu of the selected voice*!
-        .footer-menu__input:checked ~ .footer-menu__list{
-            max-height:300px;
-            transition:max-height 0.5s ease-in;
-        }
-
-        !*style for the second level menu*!
-        .footer-menu__list {
-            max-height:0;
-            padding:0;
-            overflow:hidden;
-            list-style-type:none;
-            background:#444;
-            box-shadow:0 0 1px rgba(0,0,0,.3);
-            transition:max-height 0.5s ease-out;
-            position:absolute;
-
-
-            .footer-menu__link {
-                display:block;
-                padding:12px;
-                color:#ddd;
-                text-decoration:none;
-                box-shadow:0 -1px rgba(0,0,0,.5) inset;
-                transition:background .3s;
-                white-space:nowrap;
-
-                &:hover{
-                     background:rgba(0,0,0,.3);
-                 }
-            }
-        }
-    }
-}*/
-
-
-
-
-
-
