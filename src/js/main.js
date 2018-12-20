@@ -1,7 +1,3 @@
-console.log('main.js успешно подключен!');
-console.log('document.documentElement.clientWidth = ', document.documentElement.clientWidth);
-console.log('document.documentElement.clientWidth = ', document.documentElement.clientWidth + 100);
-
 $(".carousel").slick({
     // сокрытие стрелок карусели!
     arrows: false,
@@ -23,12 +19,10 @@ $(function(){
 
         if (btnShow && $currentPos <= window.innerHeight / 4) {
             $('.scroll-up-button').fadeOut(500);
-            console.log('out');
             btnShow = false;
         }
         else if (!btnShow && $currentPos > window.innerHeight / 4) {
             $('.scroll-up-button').fadeIn(500);
-            console.log('in');
             btnShow = true;
         }
 
@@ -36,7 +30,6 @@ $(function(){
 
     let propdownMenu = () => {
         if (document.documentElement.clientWidth <= 550) {
-            console.log('document.documentElement.clientWidth = ', document.documentElement.clientWidth);
 
             $(".footer-menu__list").slideUp(500);
 
@@ -71,6 +64,7 @@ $(function(){
         $('html,body').animate({scrollTop: 0}, time, "linear");
     });
 
+    propdownMenu();
 
     window.addEventListener('resize', propdownMenu);
 });

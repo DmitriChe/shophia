@@ -165,29 +165,31 @@ figure {
             }
         }
         .header-dropdown {
-            display: flex;
+            overflow: hidden;
             width: 90px;
             height: 35px;
-            background-color: black;
-            font-family: Lato, sans-serif;
-            font-size: 12px;
-            font-weight: bold;
-            line-height: 35px;
-            text-align: center;
-            color: white;
 
-            &:hover {
-                cursor: pointer;
-                color: #55ACEE;
-            }
-
-            .header-dropdown__item {
-                width: 75%;
-            }
-            .header-dropdown__arrow {
-                width: 25%;
+            .header-dropdown__select {
+                width: 120%;
+                height: 35px;
+                border: none;
+                font-family: Lato, sans-serif;
                 font-size: 12px;
-                text-align: center;
+                font-weight: bold;
+                color: white;
+                background: url(../img/svg/angle-down-solid.svg) black no-repeat 70px;
+                background-size: 8px;
+                padding: 0 10px 0 9px;
+
+                &:hover {
+                    background: url(../img/svg/angle-down-solid-hover.svg) black no-repeat 70px;
+                    background-size: 8px;
+                    cursor: pointer;
+                    color: #55ACEE;
+                }
+            }
+            .header-dropdown__item {
+                color: white;
             }
         }
     }
@@ -262,12 +264,10 @@ figure {
                 color: white;
 
                 .sale-text__name {
-                    /*font-size: 20px;*/
                     font-size: 1.2vw;
                     font-weight: bold;
                 }
                 .sale-text__main {
-                    /*font-size: 59px;*/
                     margin: 0;
                     padding: 0;
                     line-height: normal;
@@ -276,7 +276,6 @@ figure {
                     color: black;
                 }
                 .sale-text__upto {
-                    /*font-size: 20px;*/
                     font-size: 1.2vw;
                     font-weight: bold;
 
@@ -290,7 +289,6 @@ figure {
                     }
                 }
                 .sale-text__percentage {
-                    /*font-size: 32px;*/
                     font-size: 2vw;
                     font-weight: bold;
                     color: black;
@@ -298,7 +296,6 @@ figure {
             }
         }
         .sale-checkout__button {
-            /*margin-top: 57px;*/
             border: none;
             background-color: var(--color-button);
             color: white;
@@ -999,7 +996,7 @@ figure {
             font-family: Lato, sans-serif;
             font-size: 16px;
             font-weight: bold;
-            line-height: 0.7;
+            line-height: 1;
             color: white;
             margin: 0 0 44px;
         }
@@ -1138,7 +1135,7 @@ figure {
 
             .footer-menu__item {
                 width: 100%;
-                text-aligh: center;
+                text-align: center;
 
                 .footer-menu__title {
                     display:block;
@@ -1177,6 +1174,7 @@ figure {
                 flex-direction: column;
                 align-items: center;
                 border: none;
+                margin-bottom: 5px;
 
                 .footer-subscribe__input {
                     display: block;
@@ -1190,140 +1188,7 @@ figure {
         }
     }
 }
-/*
-@media (max-width: 550px) {
-    .footer-top {
 
-        height: 500px;
-
-        // Style for the first level menu bar
-        .footer-menu {
-            position: relative;
-            display: flex;
-            text-align: center;
-            flex-direction: column;
-            align-content: center;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 10px;
-            background: var(--color-footer-bg);
-            color: #eee;
-            box-shadow:0 -1px rgba(0,0,0,.5) inset;
-
-            .footer-menu__item {
-                position: relative;
-                width: 100%;
-                text-aligh: center;
-
-                .footer-menu__title {
-                    position: relative;
-                    // display:block;
-                    padding: 0 18px 0 12px;
-                    transition: background 0.3s;
-                    cursor: pointer;
-                }
-
-                .footer-menu__title::after {
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    top: 50%;
-                    right: 5px;
-                    width: 0;
-                    height: 0;
-                    border-top: 4px solid rgba(255,255,255,.5);
-                    border-bottom: 0 solid rgba(255,255,255,.5);
-                    border-left: 4px solid transparent;
-                    border-right: 4px solid transparent;
-                    transition: border-bottom .1s, border-top .1s .1s;
-                }
-
-                .footer-menu__title:hover,
-                .footer-menu__input:checked ~ .footer-menu__title {
-                    background: rgba(0,0,0,.3);
-                }
-
-                .footer-menu__input:checked ~ .footer-menu__title::after {
-                    border-top: 0 solid rgba(255,255,255,.5);
-                    border-bottom: 4px solid rgba(255,255,255,.5);
-                    transition: border-top .1s, border-bottom .1s .1s;
-                }
-
-                // show the second level menu of the selected voice
-                .footer-menu__input:checked ~ .footer-menu__list {
-                    max-height: 300px;
-                    transition: max-height 0.5s ease-in;
-                }
-
-                // style for the second level menu
-                .footer-menu__list {
-                    text-aligh: center;
-                    width: 100%;
-                    z-index: 1;
-                    max-height: 0;
-                    padding: 0;
-                    overflow: hidden;
-                    list-style-type: none;
-                    line-height: 6px;
-                    background: #444;
-                    box-shadow: 0 0 1px rgba(0,0,0,.3);
-                    transition: max-height 0.5s ease-out;
-                    position: absolute;
-
-                    .footer-menu__link {
-                        display: block;
-                        padding: 12px;
-                        color: #ddd;
-                        text-decoration: none;
-                        box-shadow: 0 -1px rgba(0,0,0,.5) inset;
-                        transition: background .3s;
-                        white-space: nowrap;
-
-                        &:hover{
-                             background: rgba(0,0,0,.3);
-                         }
-                    }
-                }
-            }
-        }
-
-        .footer-connections {
-            .footer-connections__title {
-                text-align: center;
-            }
-            .footer-socials {
-                justify-content: center;
-                width: 100%;
-                padding: 0 10px;
-                font-size: 12px;
-
-                .footer-socials__item {
-                    width: 40px;
-                    height: 40px;
-                    margin: 0 5px
-                }
-            }
-            .footer-subscribe {
-                height: 80px;
-                width: 90%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                border: none;
-
-                .footer-subscribe__input {
-                    display: block;
-                    width: 100%;
-                    margin: 0 10px;
-                    border: thin solid #484848;
-                    text-align: center;
-                    padding: 0;
-                }
-            }
-        }
-    }
-}
-*/
 .footer-bottom {
     position: relative;
     background-color: var(--color-footer-bg);
